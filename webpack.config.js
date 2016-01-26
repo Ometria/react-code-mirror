@@ -26,8 +26,8 @@ module.exports = {
 	},
 
 	externals: {
-		react: 'React',
-		codemirror: 'codemirror'
+		react: 'React'
+		// codemirror: 'codemirror'
 	},
 
 	resolve: {
