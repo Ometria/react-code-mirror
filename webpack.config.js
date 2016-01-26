@@ -9,7 +9,9 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'lib'),
 		publicPath: '/',
-		filename: 'index.js'
+		filename: 'index.js',
+			library: 'ReactCodeMirror',
+			libraryTarget: 'umd'
 	},
 	module: {
 		loaders: [
