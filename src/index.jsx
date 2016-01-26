@@ -25,11 +25,11 @@ export default class ReactCodeMirror extends React.Component {
 
 		// Upgrade textArea node
 		this.codeMirror = _cm.fromTextArea(textareaNode, this.props.options)
-		
+
 		// Bind CodeMirror Events and apply class methods
-		this.codeMirror.on('change', this.codemirrorValueChanged)
-		this.codeMirror.on('focus', this.focusChanged.bind(this, true))
-		this.codeMirror.on('blur', this.focusChanged.bind(this, false))
+		this.codeMirror.on('change', (doc, change) => this.codemirrorValueChanged(doc, change) )
+		this.codeMirror.on('focus',  e => this.focusChanged.bind(true) )
+		this.codeMirror.on('blur',   e => this.focusChanged(false) )
 		
 		// Initialize and set text value
 		this._currentCodemirrorValue = this.props.defaultValue || this.props.value || ''
@@ -74,7 +74,6 @@ export default class ReactCodeMirror extends React.Component {
 
 	codemirrorValueChanged(doc, change) {
 		const newValue = doc.getValue()
-
 		this._currentCodemirrorValue = newValue
 		this.props.onChange && this.props.onChange(newValue)
 	}
@@ -104,5 +103,3 @@ ReactCodeMirror.propTypes = {
 	value: React.PropTypes.string,
 	className: React.PropTypes.any
 }
-
-module.exports = ReactCodeMirror
