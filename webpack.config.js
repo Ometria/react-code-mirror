@@ -10,7 +10,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'lib'),
 		publicPath: '/',
 		filename: 'index.js',
-			library: 'ReactCodeMirror',
+			library: 'react-code-mirror',
 			libraryTarget: 'umd'
 	},
 	module: {
