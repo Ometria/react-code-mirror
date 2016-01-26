@@ -104,3 +104,5 @@ ReactCodeMirror.propTypes = {
 	value: React.PropTypes.string,
 	className: React.PropTypes.any
 }
+
+module.exports = ReactCodeMirror
