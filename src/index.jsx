@@ -48,7 +48,7 @@ export default class ReactCodeMirror extends React.Component {
 		if (typeof nextProps.options === 'object') {
 			for (let option in nextProps.options) {
 				if (nextProps.options.hasOwnProperty(option)) {
-					this.codeMirror.setOption(option, nextProps.options[key])
+					this.codeMirror.setOption(option, nextProps.options[option])
 				}
 			}
 		}
