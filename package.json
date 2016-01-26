@@ -1,0 +1,34 @@
+{
+  "name": "react-code-mirror",
+  "version": "1.0.0",
+  "description": "React.js CodeMirror component",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarakChamo/react-code-mirror.git"
+  },
+  "author": "BarakChamo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BarakChamo/react-code-mirror/issues"
+  },
+  "homepage": "https://github.com/BarakChamo/react-code-mirror#readme",
+  "dependencies": {
+    "codemirror": "^5.11.0"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "webpack": "^1.12.12"
+  }
+}
