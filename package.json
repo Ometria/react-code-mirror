@@ -4,7 +4,12 @@
   "description": "React.js CodeMirror component",
   "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prepublish": "babel ./src --out-dir ./lib --source-maps --presets es2015,react"
+  },
+  "browserify-global-shim": {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   "repository": {
     "type": "git",
