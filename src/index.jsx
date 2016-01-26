@@ -10,7 +10,7 @@ if (typeof navigator !== 'undefined') {
 
 import React from 'react'
 
-class CodeMirror extends React.Component {
+export default class ReactCodeMirror extends React.Component {
 
 	getInitialState() {
 		return {
@@ -94,7 +94,7 @@ class CodeMirror extends React.Component {
 	}
 }
 
-CodeMirror.propTypes = {
+ReactCodeMirror.propTypes = {
 	onChange: React.PropTypes.func,
 	onFocusChange: React.PropTypes.func,
 	options: React.PropTypes.object,
@@ -102,5 +102,3 @@ CodeMirror.propTypes = {
 	value: React.PropTypes.string,
 	className: React.PropTypes.any
 }
-
-export default CodeMirror
