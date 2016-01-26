@@ -12,8 +12,10 @@ import React from 'react'
 
 export default class ReactCodeMirror extends React.Component {
 
-	getInitialState() {
-		return {
+	constructor(props) {
+		super()
+
+		this.state = {
 			isFocused: false
 		}
 	}
