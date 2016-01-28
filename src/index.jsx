@@ -20,15 +20,23 @@ export default class ReactCodeMirror extends React.Component {
 		}
 	}
 
+	shouldComponentUpdate() {
+		return false
+	},
+
 	componentDidMount() {
 		const textareaNode = this.refs.textarea
 
 		// Upgrade textArea node
 		this.codeMirror = _cm.fromTextArea(textareaNode, this.props.options)
 
+		// editorInstance.getWrapperElement().addEventListener("paste", 
+// function(e) { .... }); 
+
+
 		// Bind CodeMirror Events and apply class methods
 		this.codeMirror.on('change', (doc, change) => this.codemirrorValueChanged(doc, change) )
-		this.codeMirror.on('focus',  e => this.focusChanged.bind(true) )
+		this.codeMirror.on('focus',  e => this.focusChanged(true) )
 		this.codeMirror.on('blur',   e => this.focusChanged(false) )
 		
 		// Initialize and set text value
@@ -73,7 +81,13 @@ export default class ReactCodeMirror extends React.Component {
 	}
 
 	codemirrorValueChanged(doc, change) {
+		// Keep CodeMirror and the textarea up-to-date
+		doc.save()
+
+		// Get current value
 		const newValue = doc.getValue()
+
+		// re-assign current value and trigger onChange
 		this._currentCodemirrorValue = newValue
 		this.props.onChange && this.props.onChange(newValue)
 	}
