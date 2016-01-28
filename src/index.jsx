@@ -18,11 +18,11 @@ export default class ReactCodeMirror extends React.Component {
 		this.state = {
 			isFocused: false
 		}
-	},
+	}
 
 	shouldComponentUpdate() {
 		return false
-	},
+	}
 
 	componentDidMount() {
 		const textareaNode = this.refs.textarea
@@ -31,7 +31,7 @@ export default class ReactCodeMirror extends React.Component {
 		this.codeMirror = _cm.fromTextArea(textareaNode, this.props.options)
 
 		// editorInstance.getWrapperElement().addEventListener("paste", 
-// function(e) { .... }); 
+		// function(e) { .... }); 
 
 
 		// Bind CodeMirror Events and apply class methods
