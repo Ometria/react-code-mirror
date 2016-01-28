@@ -18,7 +18,7 @@ export default class ReactCodeMirror extends React.Component {
 		this.state = {
 			isFocused: false
 		}
-	}
+	},
 
 	shouldComponentUpdate() {
 		return false
